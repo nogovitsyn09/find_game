@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>7 задание</title>
+	<style>
+		.box1 {
+			background-image: url(i.jpg);
+			background-size: 100% 100%;
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			top: 200px;
+			left: 600px;
+			transition: 1s;
+		}
+		.box2 {
+			background-image: url(e.jpg);
+			background-size: 100% 100%;
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			top: 200px;
+			left: 900px;
+			transition: 1s;
+		}
+		.box3 {
+			background-image: url(t.jpg);
+			background-size: 100% 100%;
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			top: 200px;
+			left: 1200px;
+			transition: 1s;
+		}
+		.box4 {
+			background-image: url(c.jpg);
+			background-size: 100% 100%;
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			top: 500px;
+			left: 600px;
+			transition: 1s;
+		}
+		.box5 {
+			background-image: url(v.jpg);
+			background-size: 100% 100%;
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			top: 500px;
+			left: 900px;
+			transition: 1s;
+		}
+		.box6 {
+			background-image: url(b.jpg);
+			background-size: 100% 100%;
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			top: 500px;
+			left: 1200px;
+			transition: 1s;
+		}
+	</style>
+</head>
+<body>
+		
+	
+	<!-- див с красным фоном -->
+	<h1>Где находится авп гунгнир?</h1>
+	<h3>Осталось попыток: <span class="text" >3</span></h3>
+	<button class="btn">Перемешать</button>
+	<div class="main">
+		<div class="box1">
+		</div>
+		<div class="box2">
+		</div>
+		<div class="box3">
+		</div>
+		<div class="box4">
+		</div>
+		<div class="box5">
+		</div>
+		<div class="box6">
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		// Создай переменную для попыток attempts, которая содержит значение 2. Выведи ее значение во внутрь тега span. 
+		// Сделай нажатие на кнопку 
+		// Когда нажимаешь на кнопку элементы меняются местами, див перекрасить в черный
+		// Когда нажимаешь на див на спанч боба выводится сообщение молодец 
+		// Когда нажимаешь на див на сквидворда попытки -1, если попытки равны нулю то ты проиграл
+		// При победе или при проигрыши все дивы скрываются
+		let attempts = 3
+
+		document.querySelector('.btn').onclick = function() {
+
+			document.querySelector('.box1').style.background = "black";
+			
+			document.querySelector('.box2').style.background = "black";
+			
+			document.querySelector('.box3').style.background = "black";
+		
+			document.querySelector('.box4').style.background = "black";
+			
+			document.querySelector('.box5').style.background = "black";
+			
+			document.querySelector('.box6').style.background = "black";
+
+
+			document.querySelector('.box1').style.left="900px"
+			document.querySelector('.box2').style.left="1200px"
+			document.querySelector('.box3').style.left="600px"
+			document.querySelector('.box4').style.left="1200px"
+			document.querySelector('.box5').style.left="600px"
+			document.querySelector('.box6').style.left="900px"
+
+		}
+		document.querySelector('.box6').onclick = function() {
+
+			alert("ты молодец!!")
+			document.querySelector('.box6').style.backgroundImage = "url(b.jpg)"
+			document.querySelector('.box6').style.backgroundSize = "100% 100%"
+			document.querySelector('.box6').style.border = "5px solid green"
+		}
+			document.querySelector('.box1').onclick = function() {
+				document.querySelector('.box1').style.border = "5px solid red"
+				attempts = attempts - 1
+				if (attempts == 0 ) {
+					alert("ты проиграл")
+					document.querySelector('.box6').style.backgroundImage = "url(b.jpg)"
+					document.querySelector('.box6').style.backgroundSize = "100% 100%"
+					document.querySelector('.box6').style.border = "5px solid green"
+				}
+				document.querySelector('.text').innerHTML = attempts
+			}
+			document.querySelector('.box2').onclick = function() {
+				document.querySelector('.box2').style.border = "5px solid red"
+				attempts = attempts - 1
+				if (attempts == 0 ) {
+					alert("ты проиграл")
+					document.querySelector('.box6').style.backgroundImage = "url(b.jpg)"
+					document.querySelector('.box6').style.backgroundSize = "100% 100%"
+					document.querySelector('.box6').style.border = "5px solid green"
+				}
+				document.querySelector('.text').innerHTML = attempts
+			}
+			document.querySelector('.box3').onclick = function() {
+				document.querySelector('.box3').style.border = "5px solid red"
+				attempts = attempts - 1
+				if (attempts == 0 ) {
+					alert("ты проиграл")
+					document.querySelector('.box6').style.backgroundImage = "url(b.jpg)"
+					document.querySelector('.box6').style.backgroundSize = "100% 100%"
+					document.querySelector('.box6').style.border = "5px solid green"
+				}
+				document.querySelector('.text').innerHTML = attempts
+			}
+			document.querySelector('.box4').onclick = function() {
+				document.querySelector('.box4').style.border = "5px solid red"
+				attempts = attempts - 1
+				if (attempts == 0 ) {
+					alert("ты проиграл")
+					document.querySelector('.box6').style.backgroundImage = "url(b.jpg)"
+					document.querySelector('.box6').style.backgroundSize = "100% 100%"
+					document.querySelector('.box6').style.border = "5px solid green"
+				}
+				document.querySelector('.text').innerHTML = attempts
+			}
+			document.querySelector('.box5').onclick = function() {
+				document.querySelector('.box5').style.border = "5px solid red"
+				attempts = attempts - 1
+				if (attempts == 0 ) {
+					alert("ты проиграл")
+					document.querySelector('.box6').style.backgroundImage = "url(b.jpg)"
+					document.querySelector('.box6').style.backgroundSize = "100% 100%"
+					document.querySelector('.box6').style.border = "5px solid green"
+				}
+				document.querySelector('.text').innerHTML = attempts
+			}
+			
+
+			
+		
+	</script>
+</body>
+</html>
